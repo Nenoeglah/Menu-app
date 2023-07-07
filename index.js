@@ -141,7 +141,7 @@ fetch('http://localhost:3000/menuItems')
       cartContainer.innerHTML = orderHTML;
 
       // Clear the cart and update the UI accordingly
-      // cartItems = [];
+      cartItems = [];
       updateCartIcon();
     });
   })

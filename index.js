@@ -9,14 +9,14 @@ fetch('http://localhost:3000/menuItems')
     let cartItems = [];
 
     // Loop through the menu items and create elements dynamically
-    data.forEach(item => {
-      const newItem = document.createElement('div');
-      newItem.classList.add('item');
+    // data.forEach(item => {
+    //   const newItem = document.createElement('div');
+    //   newItem.classList.add('item');
 
-      const itemImg = document.createElement('div');
-      itemImg.classList.add('item-img');
-      const img = document.createElement('img');
-      img.src = item.image;
+    //   const itemImg = document.createElement('div');
+    //   itemImg.classList.add('item-img');
+    //   const img = document.createElement('img');
+    //   img.src = item.image;
       itemImg.appendChild(img);
       newItem.appendChild(itemImg);
 
@@ -110,9 +110,9 @@ fetch('http://localhost:3000/menuItems')
       basketIcon.dataset.count = cartItems.length;
     };
 
-    // // Event listener for the place order button
-    // const placeOrderBtn = document.getElementById('place-order-btn');
-    // placeOrderBtn.addEventListener('click', () => {
+    // Event listener for the place order button
+    const placeOrderBtn = document.getElementById('place-order-btn');
+    placeOrderBtn.addEventListener('click', () => {
       
       // Generate HTML for the ordered items and person's details
       let orderHTML = '';

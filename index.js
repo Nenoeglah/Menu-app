@@ -59,11 +59,11 @@ fetch('http://localhost:3000/menuItems')
           newItem.classList.add('item');
 
           const itemImg = document.createElement('div');
-          itemImg.classList.add('item-img');
-          const img = document.createElement('img');
+          // itemImg.classList.add('item-img');
+          // const img = document.createElement('img');
           img.src = item.image;
-          // itemImg.appendChild(img);
-          // newItem.appendChild(itemImg);
+          itemImg.appendChild(img);
+          newItem.appendChild(itemImg);
 
           const itemDescription = document.createElement('div');
           itemDescription.classList.add('item-description');

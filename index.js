@@ -127,15 +127,15 @@ fetch('http://localhost:3000/menuItems')
         orderHTML += '<p>No items in the cart</p>';
       }
 
-      // orderHTML += '<h3>Total Price:</h3>';
-      // const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
-      // orderHTML += '<p>' + totalPrice + '</p>';
+      orderHTML += '<h3>Total Price:</h3>';
+      const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
+      orderHTML += '<p>' + totalPrice + '</p>';
 
-      orderHTML += '<h3>Person\'s Details:</h3>';
-      orderHTML += '<p>Name: ' + document.getElementById('name').value + '</p>';
-      orderHTML += '<p>Contact: ' + document.getElementById('contact').value + '</p>';
-      orderHTML += '<p>Email: ' + document.getElementById('email').value + '</p>';
-      orderHTML += '<p>Address: ' + document.getElementById('address').value + '</p>';
+      // orderHTML += '<h3>Person\'s Details:</h3>';
+      // orderHTML += '<p>Name: ' + document.getElementById('name').value + '</p>';
+      // orderHTML += '<p>Contact: ' + document.getElementById('contact').value + '</p>';
+      // orderHTML += '<p>Email: ' + document.getElementById('email').value + '</p>';
+      // orderHTML += '<p>Address: ' + document.getElementById('address').value + '</p>';
 
       // Display the ordered items and person's details
       cartContainer.innerHTML = orderHTML;

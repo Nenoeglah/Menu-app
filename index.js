@@ -127,9 +127,9 @@ fetch('http://localhost:3000/menuItems')
         orderHTML += '<p>No items in the cart</p>';
       }
 
-      orderHTML += '<h3>Total Price:</h3>';
-      const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
-      orderHTML += '<p>' + totalPrice + '</p>';
+      // orderHTML += '<h3>Total Price:</h3>';
+      // const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
+      // orderHTML += '<p>' + totalPrice + '</p>';
 
       orderHTML += '<h3>Person\'s Details:</h3>';
       orderHTML += '<p>Name: ' + document.getElementById('name').value + '</p>';
@@ -141,10 +141,10 @@ fetch('http://localhost:3000/menuItems')
       cartContainer.innerHTML = orderHTML;
 
       // Clear the cart and update the UI accordingly
-  //     cartItems = [];
-  //     updateCartIcon();
-  //   });
-  // })
+      cartItems = [];
+      updateCartIcon();
+    });
+  })
   .catch(error => {
     console.error('Error fetching menu items:', error);
   });

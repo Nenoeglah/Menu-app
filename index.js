@@ -16,16 +16,16 @@ fetch('http://localhost:3000/menuItems')
       const itemImg = document.createElement('div');
       itemImg.classList.add('item-img');
       const img = document.createElement('img');
-      // img.src = item.image;
-      // itemImg.appendChild(img);
-      // newItem.appendChild(itemImg);
+      img.src = item.image;
+      itemImg.appendChild(img);
+      newItem.appendChild(itemImg);
 
-      const itemDescription = document.createElement('div');
-      itemDescription.classList.add('item-description');
-      const itemName = document.createElement('h2');
-      itemName.textContent = item.name;
-      const itemPrice = document.createElement('h2');
-      itemPrice.classList.add('price');
+      // const itemDescription = document.createElement('div');
+      // itemDescription.classList.add('item-description');
+      // const itemName = document.createElement('h2');
+      // itemName.textContent = item.name;
+      // const itemPrice = document.createElement('h2');
+      // itemPrice.classList.add('price');
       itemPrice.textContent = item.price;
       const button = document.createElement('button');
       button.textContent = 'Add To Cart';

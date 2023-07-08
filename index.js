@@ -32,10 +32,10 @@ fetch('http://localhost:3000/menuItems')
       button.addEventListener('click', () => {
         addToCart(item);
       });
-      // itemDescription.appendChild(itemName);
-      // itemDescription.appendChild(itemPrice);
-      itemDescription.appendChild(button);
-      newItem.appendChild(itemDescription);
+      itemDescription.appendChild(itemName);
+      itemDescription.appendChild(itemPrice);
+      // itemDescription.appendChild(button);
+      // newItem.appendChild(itemDescription);
 
       itemContainer.appendChild(newItem);
     });

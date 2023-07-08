@@ -1,6 +1,4 @@
 
-
-
 // Fetch menu items from the server
 fetch('http://localhost:3000/menuItems')
   .then(response => response.json())
@@ -115,9 +113,7 @@ fetch('http://localhost:3000/menuItems')
     // Event listener for the place order button
     const placeOrderBtn = document.getElementById('place-order-btn');
     placeOrderBtn.addEventListener('click', () => {
-      // Perform order placement logic here
-      // You can access the cart items using the 'cartItems' array
-
+      
       // Generate HTML for the ordered items and person's details
       let orderHTML = '';
       orderHTML += '<h3>Ordered Items:</h3>';
@@ -131,6 +127,10 @@ fetch('http://localhost:3000/menuItems')
         orderHTML += '<p>No items in the cart</p>';
       }
 
+      orderHTML += '<h3>Total Price:</h3>';
+      const totalPrice = cartItems.reduce((sum, item) => sum + item.price, 0);
+      orderHTML += '<p>' + totalPrice + '</p>';
+
       orderHTML += '<h3>Person\'s Details:</h3>';
       orderHTML += '<p>Name: ' + document.getElementById('name').value + '</p>';
       orderHTML += '<p>Contact: ' + document.getElementById('contact').value + '</p>';
@@ -138,7 +138,7 @@ fetch('http://localhost:3000/menuItems')
       orderHTML += '<p>Address: ' + document.getElementById('address').value + '</p>';
 
       // Display the ordered items and person's details
-      // cartContainer.innerHTML = orderHTML;
+      cartContainer.innerHTML = orderHTML;
 
       // Clear the cart and update the UI accordingly
       cartItems = [];
@@ -148,6 +148,7 @@ fetch('http://localhost:3000/menuItems')
   .catch(error => {
     console.error('Error fetching menu items:', error);
   });
+
 
 
 

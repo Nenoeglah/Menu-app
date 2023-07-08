@@ -10,8 +10,8 @@ fetch('http://localhost:3000/menuItems')
 
     // Loop through the menu items and create elements dynamically
     data.forEach(item => {
-      const newItem = document.createElement('div');
-      newItem.classList.add('item');
+      // const newItem = document.createElement('div');
+      // newItem.classList.add('item');
 
       const itemImg = document.createElement('div');
       itemImg.classList.add('item-img');
@@ -41,8 +41,8 @@ fetch('http://localhost:3000/menuItems')
     });
 
     // Add event listener to the submit button
-    // const submitBtn = document.getElementById('submit-btn');
-    // submitBtn.addEventListener('click', () => {
+    const submitBtn = document.getElementById('submit-btn');
+    submitBtn.addEventListener('click', () => {
       // Get the search input value
       const searchInput = document.getElementById('search-input').value.trim().toLowerCase();
 

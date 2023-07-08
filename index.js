@@ -28,12 +28,12 @@ fetch('http://localhost:3000/menuItems')
       itemPrice.classList.add('price');
       itemPrice.textContent = item.price;
       const button = document.createElement('button');
-      // button.textContent = 'Add To Cart';
-      // button.addEventListener('click', () => {
-      //   addToCart(item);
-      // });
-      itemDescription.appendChild(itemName);
-      itemDescription.appendChild(itemPrice);
+      button.textContent = 'Add To Cart';
+      button.addEventListener('click', () => {
+        addToCart(item);
+      });
+      // itemDescription.appendChild(itemName);
+      // itemDescription.appendChild(itemPrice);
       itemDescription.appendChild(button);
       newItem.appendChild(itemDescription);
 

@@ -34,11 +34,11 @@ fetch('http://localhost:3000/menuItems')
       });
       itemDescription.appendChild(itemName);
       itemDescription.appendChild(itemPrice);
-      // itemDescription.appendChild(button);
-      // newItem.appendChild(itemDescription);
+      itemDescription.appendChild(button);
+      newItem.appendChild(itemDescription);
 
-      itemContainer.appendChild(newItem);
-    });
+    //   itemContainer.appendChild(newItem);
+    // });
 
     // Add event listener to the submit button
     const submitBtn = document.getElementById('submit-btn');

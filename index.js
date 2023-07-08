@@ -111,8 +111,8 @@ fetch('http://localhost:3000/menuItems')
     };
 
     // Event listener for the place order button
-    const placeOrderBtn = document.getElementById('place-order-btn');
-    placeOrderBtn.addEventListener('click', () => {
+    // const placeOrderBtn = document.getElementById('place-order-btn');
+    // placeOrderBtn.addEventListener('click', () => {
       
       // Generate HTML for the ordered items and person's details
       let orderHTML = '';
@@ -138,7 +138,7 @@ fetch('http://localhost:3000/menuItems')
       orderHTML += '<p>Address: ' + document.getElementById('address').value + '</p>';
 
       // Display the ordered items and person's details
-      // cartContainer.innerHTML = orderHTML;
+      cartContainer.innerHTML = orderHTML;
 
       // Clear the cart and update the UI accordingly
       cartItems = [];

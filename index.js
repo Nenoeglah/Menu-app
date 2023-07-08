@@ -3,20 +3,20 @@
 fetch('http://localhost:3000/menuItems')
   .then(response => response.json())
   .then(data => {
-    const itemContainer = document.querySelector('.item-container');
-    const basketIcon = document.querySelector('.basket-icon');
-    const cartContainer = document.getElementById('form-container');
-    let cartItems = [];
+    // const itemContainer = document.querySelector('.item-container');
+    // const basketIcon = document.querySelector('.basket-icon');
+    // const cartContainer = document.getElementById('form-container');
+    // let cartItems = [];
 
     // Loop through the menu items and create elements dynamically
-    // data.forEach(item => {
-    //   const newItem = document.createElement('div');
-    //   newItem.classList.add('item');
+    data.forEach(item => {
+      const newItem = document.createElement('div');
+      newItem.classList.add('item');
 
-    //   const itemImg = document.createElement('div');
-    //   itemImg.classList.add('item-img');
-    //   const img = document.createElement('img');
-    //   img.src = item.image;
+      const itemImg = document.createElement('div');
+      itemImg.classList.add('item-img');
+      const img = document.createElement('img');
+      img.src = item.image;
       itemImg.appendChild(img);
       newItem.appendChild(itemImg);
 

@@ -62,8 +62,8 @@ fetch('http://localhost:3000/menuItems')
           itemImg.classList.add('item-img');
           const img = document.createElement('img');
           img.src = item.image;
-          itemImg.appendChild(img);
-          newItem.appendChild(itemImg);
+          // itemImg.appendChild(img);
+          // newItem.appendChild(itemImg);
 
           const itemDescription = document.createElement('div');
           itemDescription.classList.add('item-description');
@@ -111,8 +111,8 @@ fetch('http://localhost:3000/menuItems')
     };
 
     // Event listener for the place order button
-    // const placeOrderBtn = document.getElementById('place-order-btn');
-    // placeOrderBtn.addEventListener('click', () => {
+    const placeOrderBtn = document.getElementById('place-order-btn');
+    placeOrderBtn.addEventListener('click', () => {
       
       // Generate HTML for the ordered items and person's details
       let orderHTML = '';

@@ -99,20 +99,20 @@ fetch('http://localhost:3000/menuItems')
       document.getElementById('search-input').value = '';
     });
 
-    // // Function to add an item to the cart
-    // const addToCart = item => {
-    //   cartItems.push(item);
-    //   updateCartIcon();
-    // };
+    // Function to add an item to the cart
+    const addToCart = item => {
+      cartItems.push(item);
+      updateCartIcon();
+    };
 
     // Function to update the cart icon with the number of items
     const updateCartIcon = () => {
       basketIcon.dataset.count = cartItems.length;
     };
 
-    // Event listener for the place order button
-    const placeOrderBtn = document.getElementById('place-order-btn');
-    placeOrderBtn.addEventListener('click', () => {
+    // // Event listener for the place order button
+    // const placeOrderBtn = document.getElementById('place-order-btn');
+    // placeOrderBtn.addEventListener('click', () => {
       
       // Generate HTML for the ordered items and person's details
       let orderHTML = '';

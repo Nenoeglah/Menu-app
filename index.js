@@ -44,10 +44,10 @@ fetch('http://localhost:3000/menuItems')
     const submitBtn = document.getElementById('submit-btn');
     submitBtn.addEventListener('click', () => {
       // Get the search input value
-      const searchInput = document.getElementById('search-input').value.trim().toLowerCase();
+      // const searchInput = document.getElementById('search-input').value.trim().toLowerCase();
 
       // Find the matching item
-      // const matchedItem = data.find(item => item.name.toLowerCase() === searchInput);
+      const matchedItem = data.find(item => item.name.toLowerCase() === searchInput);
 
       // Clear the item container
       itemContainer.innerHTML = '';

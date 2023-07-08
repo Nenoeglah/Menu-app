@@ -10,8 +10,8 @@ fetch('http://localhost:3000/menuItems')
 
     // Loop through the menu items and create elements dynamically
     data.forEach(item => {
-      // const newItem = document.createElement('div');
-      // newItem.classList.add('item');
+      const newItem = document.createElement('div');
+      newItem.classList.add('item');
 
       const itemImg = document.createElement('div');
       itemImg.classList.add('item-img');

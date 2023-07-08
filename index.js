@@ -138,13 +138,13 @@ fetch('http://localhost:3000/menuItems')
       orderHTML += '<p>Address: ' + document.getElementById('address').value + '</p>';
 
       // Display the ordered items and person's details
-      // cartContainer.innerHTML = orderHTML;
+      cartContainer.innerHTML = orderHTML;
 
       // Clear the cart and update the UI accordingly
-      cartItems = [];
-      updateCartIcon();
-    });
-  })
+  //     cartItems = [];
+  //     updateCartIcon();
+  //   });
+  // })
   .catch(error => {
     console.error('Error fetching menu items:', error);
   });

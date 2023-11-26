@@ -1,0 +1,12 @@
+{
+  "name": "menu-app",
+  "version": "1.0.0",
+  "description": "## Menu project ## Description This is a menu project that allows users to design and maintain menus for various reasons. It includes a web interface for interacting with the menus and talks with a JSON server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
